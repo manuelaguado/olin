@@ -28,10 +28,6 @@ class Site extends Controlador
 
        }
 
-       public function list_search(){
-              require SITE.'extra/list_results.php';
-       }
-
        function mail(){
               $datamail = array();
               $datamail['destinatarios'] = array(
@@ -46,12 +42,6 @@ class Site extends Controlador
                      'hospital'		=>	'Belisario Domíguez'
               );
               $this->sendMail($datamail);
-       }
-       function dirisotope($directorio,$process){
-              $dir = $this->loadModel('Directorio');
-              $filter = $dir->subnivel($process);
-              $directory = $dir->elements($process);
-              require SITE.'nosotros/directorio/assets/'.$directorio.'.php';
        }
 }
 ?>
