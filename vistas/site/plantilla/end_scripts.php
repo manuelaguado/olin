@@ -150,7 +150,6 @@
 			};
 		}();
 		jQuery(document).ready(function() {
-			GeneralScripts.init();
 			LinkD.init();
 			<?php if($load){ ?>
 				StartNow.init('<?=$load?>');
