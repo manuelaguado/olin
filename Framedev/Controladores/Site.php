@@ -3,7 +3,7 @@ class Site extends Controlador
 {
        public function index()
        {
-              $load='site/page/inicio/index';
+              $load='site/page/index/index';
               require SITE.'plantilla/index.php';
        }
 
