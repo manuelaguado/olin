@@ -41,6 +41,7 @@
 	BUTTONS GRID_SYSTEM ICONS TYPOGRAPY 404 500 PRICING_TABLE SEARCH_RESULTS
 	PAGE POST
 	-->
+    <script>var url_app = '<?=URL_APP?>';</script>
     <script src="<?=URL_PUBLIC?>frontend/bower_components/flexslider/jquery.flexslider-min.js"></script>
     <!-- CONTACT -->
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=<?=GOOGLE_MAPS?>"></script>
@@ -51,6 +52,7 @@
     <script src="<?=URL_PUBLIC?>frontend/bower_components/mixitup/build/jquery.mixitup.min.js"></script>
 
     <!-- end: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
+
     <script>
 		var LinkD = function () {
 			return {
