@@ -25,6 +25,7 @@ define('MAIL_FROM','XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 date_default_timezone_set('America/Mexico_City');
 
 /*Variables*/
+define('URL_MAIN','../',true);
 define('URL_CONTROLADOR','../Framedev/Controladores/',true);
 define('URL_MODELO','../Framedev/Modelos/',true);
 define('URL_VISTA','../vistas/',true);
