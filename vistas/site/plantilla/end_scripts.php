@@ -55,45 +55,109 @@
 		var LinkD = function () {
 			return {
 				init: function () {
-					$(".load-content").click(function() {
+					$(".chargemenu").click(function() {
 						$.ajax({
-							url: 'site/page/'+$(this).data('folder')+'/'+$(this).data('file'),
+							url: url_app +  'site/page/'+$(this).data('folder')+'/'+$(this).data('file')+'/'+$(this).data('process'),
 							beforeSend: function( data ) {
 								$('#procesando').show();
-								$('#proceso_listo').hide();
 								$('#contenido_dinamico').empty();
+								$(".rd-navbar-nav").find(".rd-navbar-submenu").removeClass("opened").removeClass("focus");
+								$(".rd-navbar-inner").find(".rd-navbar-nav-wrap").removeClass("active");
+								$(".rd-navbar-panel").find(".rd-navbar-toggle").removeClass("active");
 							},
-							success: function(data) {  
-								$('#contenido_dinamico').html(data);  
-							}  
-						});  
+							success: function(data) {
+								$('#contenido_dinamico').html(data);
+								$('#procesando').hide();
+								$('html,body').animate({
+								    scrollTop: $("body").offset().top
+								}, 1000);
+							}
+						});
 					});
 				}
 			};
 		}();
-		
+		var LinkAjax = function () {
+			return {
+				init: function () {
+					$(".load-content").click(function() {
+						$.ajax({
+							url: url_app +  'site/page/'+$(this).data('folder')+'/'+$(this).data('file')+'/'+$(this).data('process'),
+							beforeSend: function( data ) {
+								$('#procesando').show();
+								$('#contenido_dinamico').empty();
+							},
+							success: function(data) {
+								$('#contenido_dinamico').html(data);
+								$('#procesando').hide();
+							}
+						});
+					});
+					$(".secondarysearch").click(function() {
+						$.ajax({
+							url: url_app +  'site/list_search',
+							method: "POST",
+							data: $("#secsearchform").serialize(),
+							beforeSend: function( data ) {
+								$('#dinamic_search_loader').show();
+								$('#busqueda_dinamica_ajax').empty();
+							},
+							success: function(data) {
+								$('#dinamic_search_loader').hide();
+								$('#busqueda_dinamica_ajax').html(data);
+							}
+						});
+					});
+					$('#rd-search-form-input-1').keydown(function(e) {
+						if (e.keyCode == 13) {
+							$.ajax({
+								url: url_app +  'site/list_search',
+								method: "POST",
+								data: $("#secsearchform").serialize(),
+								beforeSend: function( data ) {
+									$('#dinamic_search_loader').show();
+									$('#busqueda_dinamica_ajax').empty();
+								},
+								success: function(data) {
+									$('#dinamic_search_loader').hide();
+									$('#busqueda_dinamica_ajax').html(data);
+								}
+							});
+							return false;
+						}
+					});
+				}
+			};
+		}();
 		var StartNow = function () {
-			var loadContetIndex = function () {        
+			var loadContetIndex = function (load) {
 				$.ajax({
-					url: 'site/page/index/index',
+					url: url_app +  load,
 					beforeSend: function( data ) {
 						$('#procesando').show();
-						$('#proceso_listo').hide();
+						$('#contenido_dinamico').empty();
 					},
-					success: function(data) {  
-						$('#contenido_dinamico').html(data);  
-					}  
+					success: function(data) {
+						$('#contenido_dinamico').html(data);
+						$('#procesando').hide();
+					}
 				});
 			};
 			return {
-				init: function () {
-					loadContetIndex();
+				init: function (load) {
+					loadContetIndex(load);
 				}
 			};
 		}();
 		jQuery(document).ready(function() {
-			StartNow.init();
-			Main.init();
+			GeneralScripts.init();
 			LinkD.init();
+			<?php if($load){ ?>
+				StartNow.init('<?=$load?>');
+			<?php } ?>
+                     $().UItoTop({
+                            easingType: 'easeOutQuart',
+                            containerClass: 'ui-to-top fa fa-angle-up'
+                     });
 		});
     </script>
