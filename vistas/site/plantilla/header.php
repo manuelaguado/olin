@@ -75,8 +75,8 @@
                     <!-- end: RESPONSIVE MENU TOGGLER -->
                     <!-- start: LOGO -->
                     <a class="navbar-brand" href="index.html">
-                CLIP<i class="clip-clip"></i>ONE
-            </a>
+                          <img width="100px" src="<?=URL_PUBLIC?>frontend/images/ampm/ampm.svg">
+                     </a>
                     <!-- end: LOGO -->
                 </div>
 				<?php include_once('menu.php'); ?>
