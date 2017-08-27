@@ -156,9 +156,5 @@
 			<?php if($load){ ?>
 				StartNow.init('<?=$load?>');
 			<?php } ?>
-                     $().UItoTop({
-                            easingType: 'easeOutQuart',
-                            containerClass: 'ui-to-top fa fa-angle-up'
-                     });
 		});
     </script>
