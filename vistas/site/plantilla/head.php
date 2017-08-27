@@ -18,6 +18,7 @@
     <link type="text/css" rel="stylesheet" href="<?=URL_PUBLIC?>frontend/css/main.min.css" />
     <link type="text/css" rel="stylesheet" href="<?=URL_PUBLIC?>frontend/css/main-responsive.min.css" />
     <link type="text/css" rel="stylesheet" id="skin_color" href="<?=URL_PUBLIC?>frontend/css/theme_blue.min.css" />
+    <link type="text/css" rel="stylesheet" id="skin_color" href="<?=URL_PUBLIC?>frontend/css/olin.css" />
     <!-- end: MAIN CSS -->
     <!-- start: CSS REQUIRED FOR THIS PAGE ONLY -->
     <!-- RS5.0 Main Stylesheet -->

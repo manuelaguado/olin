@@ -40,5 +40,5 @@ define('FW7',URL_PUBLIC.'fw7/',true);
 define('MATERIAL',URL_PUBLIC.'material/',true);
 
 //API DE GOOGLE MAPS
-define('GOOGLE_MAPS','XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',false);
+define('GOOGLE_MAPS','AIzaSyCLDNq5LCDnXW8-EdG9aUZIpAmi7uKcnKk',false);
 ?>

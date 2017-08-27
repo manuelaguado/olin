@@ -1,12 +1,14 @@
 <body>
 	<?php include_once('header.php'); ?>
-	
+
     <!-- start: MAIN CONTAINER -->
+    <div id="procesando"><div id="loader_hide">
+	    <img src="<?=URL_PUBLIC?>frontend/images/loader_02.gif" alt="loader"></div></div>
     <div class="main-container" id="contenido_dinamico">
 		<!--Contenido del sitio-->
     </div>
     <!-- end: MAIN CONTAINER -->
-	
+
 	<?php include_once('footer.php'); ?>
 
 	<?php include_once('end_scripts.php'); ?>

@@ -23,8 +23,8 @@
     <script src="<?=URL_PUBLIC?>frontend/bower_components/flexslider/jquery.flexslider-min.js"></script>
     <script src="<?=URL_PUBLIC?>frontend/bower_components/jquery.stellar/jquery.stellar.min.js"></script>
     <script src="<?=URL_PUBLIC?>frontend/bower_components/jquery-colorbox/jquery.colorbox-min.js"></script>
-	
-	
+
+
 	<script type="text/javascript" src="<?=URL_PUBLIC?>frontend/plugins/slider-revolution/js/extensions/revolution.extension.video.min.js"></script>
 	<script type="text/javascript" src="<?=URL_PUBLIC?>frontend/plugins/slider-revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
 	<script type="text/javascript" src="<?=URL_PUBLIC?>frontend/plugins/slider-revolution/js/extensions/revolution.extension.actions.min.js"></script>
@@ -32,23 +32,14 @@
 	<script type="text/javascript" src="<?=URL_PUBLIC?>frontend/plugins/slider-revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
 	<script type="text/javascript" src="<?=URL_PUBLIC?>frontend/plugins/slider-revolution/js/extensions/revolution.extension.navigation.min.js"></script>
 	<script type="text/javascript" src="<?=URL_PUBLIC?>frontend/plugins/slider-revolution/js/extensions/revolution.extension.migration.min.js"></script>
-	<script type="text/javascript" src="<?=URL_PUBLIC?>frontend/plugins/slider-revolution/js/extensions/revolution.extension.parallax.min.js"></script>	
-	
-	<!-- INDEX -->
-	<script src="<?=URL_PUBLIC?>frontend/js/min/index.min.js"></script>
-	<!-- 
-	CONTACT FAQ SERVICES TEAM ABOUT CAREERS EXAMPLE1 EXAMPLE2 EXAMPLE3 ITEM
-	BUTTONS GRID_SYSTEM ICONS TYPOGRAPY 404 500 PRICING_TABLE SEARCH_RESULTS
-	PAGE POST
-	-->
+	<script type="text/javascript" src="<?=URL_PUBLIC?>frontend/plugins/slider-revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+
+    <script src="<?=URL_PUBLIC?>frontend/js/min/index.min.js"></script>
     <script>var url_app = '<?=URL_APP?>';</script>
     <script src="<?=URL_PUBLIC?>frontend/bower_components/flexslider/jquery.flexslider-min.js"></script>
-    <!-- CONTACT -->
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=<?=GOOGLE_MAPS?>"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=<?=GOOGLE_MAPS?>"></script>
     <script src="<?=URL_PUBLIC?>frontend/bower_components/gmaps/gmaps.min.js"></script>
-    <!-- ABOUT -->
     <script src="<?=URL_PUBLIC?>frontend/bower_components/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
-    <!-- EXAMPLE1 EXAMPLE2 EXAMPLE3-->
     <script src="<?=URL_PUBLIC?>frontend/bower_components/mixitup/build/jquery.mixitup.min.js"></script>
 
     <!-- end: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
@@ -95,39 +86,6 @@
 							}
 						});
 					});
-					$(".secondarysearch").click(function() {
-						$.ajax({
-							url: url_app +  'site/list_search',
-							method: "POST",
-							data: $("#secsearchform").serialize(),
-							beforeSend: function( data ) {
-								$('#dinamic_search_loader').show();
-								$('#busqueda_dinamica_ajax').empty();
-							},
-							success: function(data) {
-								$('#dinamic_search_loader').hide();
-								$('#busqueda_dinamica_ajax').html(data);
-							}
-						});
-					});
-					$('#rd-search-form-input-1').keydown(function(e) {
-						if (e.keyCode == 13) {
-							$.ajax({
-								url: url_app +  'site/list_search',
-								method: "POST",
-								data: $("#secsearchform").serialize(),
-								beforeSend: function( data ) {
-									$('#dinamic_search_loader').show();
-									$('#busqueda_dinamica_ajax').empty();
-								},
-								success: function(data) {
-									$('#dinamic_search_loader').hide();
-									$('#busqueda_dinamica_ajax').html(data);
-								}
-							});
-							return false;
-						}
-					});
 				}
 			};
 		}();
@@ -152,6 +110,7 @@
 			};
 		}();
 		jQuery(document).ready(function() {
+                     Index.init();
 			LinkD.init();
 			<?php if($load){ ?>
 				StartNow.init('<?=$load?>');
