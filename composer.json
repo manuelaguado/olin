@@ -1,0 +1,21 @@
+{
+	"minimum-stability": "dev",
+	"repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/manuelaguado/mysqldatatables.git",
+			"url": "https://github.com/manuelaguado/mail_2_0.git"
+        }
+    ],
+    "require": {
+		"php-console/php-console": "^3.1",
+		"PHPOffice/PHPExcel": "1.8.1",
+		"mobiledetect/mobiledetectlib": "^2.8",
+		"setasign/fpdi-fpdf": "1.6.1"
+	},
+    "autoload": {
+        "psr-4": {
+            "Framedev\\": "Framedev"
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "name": "manuelaguado/mysqldatatables",
+    "type": "project",
+    "description": "Libreria para procesar tablas del lado del servidor",
+    "keywords": ["Datatables", "MySql"],
+    "homepage": "https://github.com/manuelaguado/mysqldatatables",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Manuel Aguado",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/manuelaguado/mysqldatatables/issues",
+        "source": "https://github.com/manuelaguado/mysqldatatables"
+    },
+    "require": {
+        "php": ">=5.3.0"
+    }
+}

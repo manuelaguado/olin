@@ -1,0 +1,21 @@
+{
+    "name": "manuelaguado/mail_2_0",
+    "type": "project",
+    "description": "Envío de mails con soporte para plantillas , librería para Framedev",
+    "keywords": ["PEAR", "MAIL"],
+    "homepage": "https://github.com/manuelaguado/mail_2_0",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Manuel Aguado",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/manuelaguado/mail_2_0/issues",
+        "source": "https://github.com/manuelaguado/mail_2_0"
+    },
+    "require": {
+        "php": ">=5.3.0"
+    }
+}

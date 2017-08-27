@@ -1,0 +1,3 @@
+<script>
+	LinkD.init();
+</script>
