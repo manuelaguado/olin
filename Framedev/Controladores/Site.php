@@ -3,8 +3,6 @@ class Site extends Controlador
 {
        public function index()
        {
-              $dir = $this->loadModel('Directorio');
-              $menu_nivel_1 = $dir->menu();
               $load='site/page/inicio/index';
               require SITE.'plantilla/index.php';
        }
