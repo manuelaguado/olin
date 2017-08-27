@@ -91,7 +91,7 @@
                             &copy; Copyright
                             <script>
                                 document.write(new Date().getFullYear())
-                            </script> by Clip-One. All Rights Reserved.
+                            </script> by Clip-One. Branch Master
                         </p>
                     </div>
                     <div class="col-md-4">
