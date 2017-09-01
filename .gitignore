@@ -1,6 +1,4 @@
-config.php
-libs/config.php
-http/
+Frameved/Libs/Config.php
 public/plugs/cache/
 public/tmp/
 uploads/perfiles/
