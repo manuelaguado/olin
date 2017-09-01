@@ -4,9 +4,9 @@ define('DIR_FILES','/var/www/ampm/clinic/',true);
 
 define('DB_TYPE', 'mysql');
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'clinic');
-define('DB_USER', 'root');
-define('DB_PASS', 'kls2qr824');
+define('DB_NAME', 'clinic.dev');
+define('DB_USER', 'ampm');
+define('DB_PASS', 'goqMR5KyEFR5aFKO');
 
 define('DOMAIN','ampmclinic.tk');
 define('URL_APP','http://'.DOMAIN.'/',true);
